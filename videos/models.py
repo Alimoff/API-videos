@@ -6,6 +6,12 @@ from django.db import models
 class Videos(models.Model):
     name = models.CharField("Name:", max_length=250)
     link = models.URLField("Link:", max_length=300)
+    image = models.ImageField(
+        upload_to=None,
+        height_field=None,
+        width_field=None,
+        max_length=100,
+    )
     text = models.TextField("Description:")
 
     # more info
